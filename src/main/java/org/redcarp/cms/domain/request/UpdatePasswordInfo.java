@@ -1,0 +1,34 @@
+package org.redcarp.cms.domain.request;
+
+import org.redcarp.cms.domain.User;
+
+public class UpdatePasswordInfo {
+
+	private String oldPassword;
+
+	private User user;
+
+	public UpdatePasswordInfo() {
+	}
+
+	public UpdatePasswordInfo(String oldPassword, User user) {
+		this.oldPassword = oldPassword;
+		this.user = user;
+	}
+
+	public String getOldPassword() {
+		return oldPassword;
+	}
+
+	public void setOldPassword(String oldPassword) {
+		this.oldPassword = oldPassword;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+}

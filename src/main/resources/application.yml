@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cms_platform?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 666888
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  resources:
+    static-locations: file:${custom.upload-dir}
+  mvc:
+    static-path-pattern: /${custom.upload-dir}/**
+server:
+  port: 8080
+  servlet:
+    context-path: /
+custom:
+  upload-dir: /Users/renweiwei/cms
+  jwt-secret-key: your_jwt_secret_key
